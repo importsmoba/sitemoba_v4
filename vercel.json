@@ -1,6 +1,7 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/enviar-para-sheets.js" }
+    { "source": "/api/(.*)", "destination": "/api/enviar-para-sheets.js" },
+    { "source": "/(.*)", "destination": "/public/$1" }
   ],
   "functions": {
     "api/enviar-para-sheets.js": {
@@ -20,10 +21,6 @@
         { "key": "Access-Control-Allow-Origin", "value": "*" }
       ]
     }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/public/$1" }
-  ],
-  "outputDirectory": "public"
+  ]
 }
 
